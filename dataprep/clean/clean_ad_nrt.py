@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 Andorra NRT (Número de Registre Tributari, Andorra tax number).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument, E1101, E1133
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_ad_nrt(
     --------
     Clean a column of Andorra NRT data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "ad_nrt": [
             "U-132950-X",
             "D059888N",

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Swiss business identifiers (UIDs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_ch_uid(
     --------
     Clean a column of UID data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "uid": [
             'CHE100155212',
             'CHE-100.155.213',]

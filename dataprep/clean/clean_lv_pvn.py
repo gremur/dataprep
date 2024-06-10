@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Latvian PVN (VAT) numbers (PVNs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_lv_pvn(
     --------
     Clean a column of PVN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "pvn": [
             '161175-19997',
             '40003521601',]

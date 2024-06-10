@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Mauritian national ID numbers (NIDs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -60,7 +61,7 @@ def clean_mu_nid(
     --------
     Clean a column of NID data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "nid": [
             'J2906201304089',
             'J2906201304088',]

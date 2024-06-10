@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing German personal tax number (IDNRs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_de_idnr(
     --------
     Clean a column of IDNR data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "idnr": [
             "36574261809",
             "36554266806"]

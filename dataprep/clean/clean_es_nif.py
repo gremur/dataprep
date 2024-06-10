@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Spanish NIF numbers (NIFs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_es_nif(
     --------
     Clean a column of NIF data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "nif": [
             'ES B-58378431',
             'B64717839']

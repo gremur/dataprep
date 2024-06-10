@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing German company registry id (handelsregisternummer).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -60,7 +61,7 @@ def clean_de_handelsregisternummer(
     --------
     Clean a column of handelsregisternummer data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "handelsregisternummer": [
             'Aachen HRA 11223',
             'Aachen HRC 44123',]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing European VAT numbers (VATs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_eu_vat(
     --------
     Clean a column of VAT data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "vat": [
             'ATU 57194903',
             'FR 61 954 506 077']

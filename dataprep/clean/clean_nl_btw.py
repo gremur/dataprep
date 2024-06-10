@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Dutch BTW numbers (BTWs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_nl_btw(
     --------
     Clean a column of BTW data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "btw": [
             '004495445B01',
             '123456789B90',]

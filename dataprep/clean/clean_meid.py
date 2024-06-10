@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 Mobile Equipment Identifiers (MEIDs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument, E1101, E1133
 from typing import Any, Union
 from operator import itemgetter
@@ -69,7 +70,7 @@ def clean_meid(
     --------
     Clean a column of MEID data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "meid": [
             "af0123450abcDEC"]
             })

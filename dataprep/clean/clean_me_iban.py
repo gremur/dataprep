@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Montenegro IBANs (IBANs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_me_iban(
     --------
     Clean a column of IBAN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "iban": [
             "ME25510000000006234133",
             "ME52510000000006234132",]

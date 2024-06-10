@@ -1,6 +1,7 @@
 """
 Common functions and classes for the clean_duplication function.
 """
+
 # pylint: disable=no-name-in-module
 from string import punctuation
 from unicodedata import combining, category, normalize
@@ -11,15 +12,15 @@ from typing import List, Set, Union, DefaultDict
 from itertools import permutations
 from os import path
 from tempfile import mkdtemp
-
 import pandas as pd
 import dask.dataframe as dd
 import dask
 from IPython.display import Javascript, display
-from Levenshtein import distance
 from metaphone import doublemetaphone
+from rapidfuzz.distance.Levenshtein import distance as LevenshteinDistance
 
 from .utils import to_dask
+
 
 DECODE_FUNC = """
     function b64DecodeUnicode(str) {
@@ -124,6 +125,8 @@ class Clusterer:
         """
         tokens = _ngram_tokens(val, block_size)
         for token in tokens:
+            if token not in blocks:
+                blocks[token] = set()
             blocks[token].add(val)
 
     @staticmethod
@@ -141,7 +144,7 @@ class Clusterer:
                     continue
 
                 cluster_map[center].add(center)
-                dist = distance(center, val)
+                dist = LevenshteinDistance(center, val)
                 if dist <= radius or radius < 0:
                     cluster_map[center].add(val)
 
@@ -208,7 +211,6 @@ class Clusterer:
     def _create_replace_calls(
         self, cluster_page: pd.Series, do_merge: List[bool], new_values: List[str]
     ) -> str:
-
         """
         Creates a string containing the required replace function calls.
 

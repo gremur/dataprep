@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Spanish personal identity codes (DNIs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_es_dni(
     --------
     Clean a column of DNI data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "dni": [
             '54362315-K',
             '54362315']

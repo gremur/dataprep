@@ -1,6 +1,7 @@
 """
 This module implements the visualization for the plot_diff function.
 """  # pylint: disable=too-many-lines
+
 from typing import Any, Dict, List, Tuple, Optional
 
 import math
@@ -574,7 +575,7 @@ def format_num_stats(data: Dict[str, List[Any]]) -> Dict[str, Dict[str, List[Any
     descriptive = {
         "Mean": data["mean"],
         "Standard Deviation": data["std"],
-        "Variance": [std ** 2 for std in data["std"]],
+        "Variance": [std**2 for std in data["std"]],
         "Sum": [mean * npres for mean, npres in zip(data["mean"], data["npres"])],
         "Skewness": [float(skew) for skew in data["skew"]],
         "Kurtosis": [float(kurt) for kurt in data["kurt"]],

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing German tax numbers (STNRs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from typing import Optional
@@ -58,7 +59,7 @@ def clean_de_stnr(
     --------
     Clean a column of STNR data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "stnr": [
             "181/815/0815 5",
             "136695978"]

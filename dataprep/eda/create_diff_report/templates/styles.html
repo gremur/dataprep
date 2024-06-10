@@ -3,6 +3,25 @@
         margin: 0;
     }
 
+    .sort-title{
+        font-weight:bold;
+    }
+
+    .section-sort {
+        font-family: sans-serif;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    .vp-plot {
+        display: none;
+        margin: auto;
+        width: 500px;
+        justify-content: center;
+        align-items: flex-end;
+        flex-flow: column nowrap;
+    }
+
     .var-plot {
         display: none;
         margin-bottom: 10px;
@@ -303,6 +322,15 @@
             max-width: 120px;
         }
 
+        .vp-plot-categorical {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .vp-plot-categorical>div {
+            flex: 0 1 35%;
+        }
+
         .section {
             max-width: 975px;
         }
@@ -324,6 +352,14 @@
         .navbar-top a {
             padding: 5px 5px;
             font-size: 15px;
+        }
+
+        .vp-plot-numerical {
+            flex-direction: column;
+        }
+
+        .vp-plot-categorical {
+            flex-direction: column;
         }
 
         .vp-switch {

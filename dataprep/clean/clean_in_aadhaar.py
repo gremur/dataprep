@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 Indian digital resident personal identity numbers (Aadhaars).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_in_aadhaar(
     --------
     Clean a column of Aadhaar data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "aadhaar": [
             "234123412346",
             "643343121",]

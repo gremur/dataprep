@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Danish citizen number (CPRs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_dk_cpr(
     --------
     Clean a column of CPR data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cpr": [
             "2110625629",
             "511062-5629"]

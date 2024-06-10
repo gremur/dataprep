@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 UID (Umsatzsteuer-Identifikationsnummer, Austrian VAT number).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument, E1101, E1133
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_at_uid(
     --------
     Clean a column of Austrian UID data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "at_uid": [
             "AT U13585627",
             "U13585626"]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Irish personal numbers (PPSs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_ie_pps(
     --------
     Clean a column of PPS data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "pps": [
             '6433435OA',
             '6433435VH',]

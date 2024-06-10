@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Canadian Business Numbers (BNs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_ca_bn(
     --------
     Clean a column of BN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "bn": [
             '12302 6635',
             '12302 6635 RC 0001'

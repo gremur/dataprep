@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 classification for businesses in the European Union (NACE).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -60,7 +61,7 @@ def clean_eu_nace(
     --------
     Clean a column of NACE data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "nace": [
             "6201",
             "99999999999"]

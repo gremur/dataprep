@@ -50,7 +50,6 @@ def clean_currency(
     report: bool = True,
     progress: bool = False,
 ) -> Union[pd.DataFrame, dd.DataFrame]:
-
     """
     Clean, standardize and convert currencies.
 
@@ -73,7 +72,7 @@ def clean_currency(
                 - For fiat currencies use the 3 letter abbreviation. Eg. "usd", "inr", etc.
                 - For cyrptocurrencies use the full name of the coin. Eg "Binance Coin", "ethereum", etc.
         (default : None)
-    target representation:
+    target_representation:
         The desired format in which the result would be displayed.
             - 'decimal' (floating point number)
             - 'abbreviation' (string with comma seprated values)

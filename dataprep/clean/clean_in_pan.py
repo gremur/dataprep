@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Indian Permanent Account numbers (PANs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -62,7 +63,7 @@ def clean_in_pan(
     --------
     Clean a column of PAN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "pan": [
             'ACUPA7085R',
             '234123412347',]

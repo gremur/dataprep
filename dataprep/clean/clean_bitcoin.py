@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Bitcoin Addresses.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument
 from typing import Any, Union
 from operator import itemgetter
@@ -64,7 +65,7 @@ def clean_bitcoin(
     --------
     Clean a column of Bitcoint Address data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "bitcoin": [
             "1NEDqZPvTWRaoho48qXuLLsrYomMXPABfD",
             "BC1QARDV855YJNGSPVXUTTQ897AQCA3LXJU2Y69JCE"]

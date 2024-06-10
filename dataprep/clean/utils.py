@@ -1,12 +1,13 @@
 """Common functions"""
-from typing import Dict, Union, Any
+
 import http.client
 import json
+from math import ceil
+from typing import Any, Dict, Union
 
 import dask.dataframe as dd
 import numpy as np
 import pandas as pd
-
 
 NULL_VALUES = {
     np.nan,
@@ -69,7 +70,7 @@ def to_dask(df: Union[pd.DataFrame, dd.DataFrame]) -> dd.DataFrame:
         return df
 
     df_size = df.memory_usage(deep=True).sum()
-    npartitions = np.ceil(df_size / 128 / 1024 / 1024)  # 128 MB partition size
+    npartitions = ceil(df_size / 128 / 1024 / 1024)  # 128 MB partition size
     return dd.from_pandas(df, npartitions=npartitions)
 
 
@@ -162,7 +163,7 @@ def _get_rate(base_cur: str, dest_cur: str, url: str) -> Any:
         rate = np.round(response_json["rates"][dest_cur], 4)
         if not rate:
             raise RatesNotAvailableError(
-                "Currency Rate {0} => {1} not available latest".format(base_cur, dest_cur)
+                f"Currency Rate {base_cur} => {dest_cur} not available latest"
             )
         return rate
     raise RatesNotAvailableError("Currency Rates Source Not Ready / Available")
@@ -183,7 +184,7 @@ def _get_rate_crypto(base_cur: str, dest_cur: str, url: str) -> Any:
         rate = response_json[base_cur][dest_cur]
         if not rate:
             raise RatesNotAvailableError(
-                "Currency Rate {0} => {1} not available latest".format(base_cur, dest_cur)
+                f"Currency Rate {base_cur} => {dest_cur} not available latest"
             )
         return rate
     raise RatesNotAvailableError("Currency Rates Source Not Ready / Available")
@@ -203,9 +204,7 @@ def _get_crypto_symbol_and_id(crypto_name: str, file_path: str) -> Any:
         return crypto_id, crypto_symbol
     except Exception as key_error:
         raise KeyError(
-            "The target curency name `{0}` doesn't sound correct, please recheck your value".format(
-                crypto_name
-            )
+            f"The target curency name `{crypto_name}` doesn't sound correct, please recheck your value"
         ) from key_error
 
 

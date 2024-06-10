@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 United Kingdom Unique Taxpayer Reference (UTRs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -60,7 +61,7 @@ def clean_gb_utr(
     --------
     Clean a column of UTR data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "utr": [
             '1955839661',
             '2955839661',]

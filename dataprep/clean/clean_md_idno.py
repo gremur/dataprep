@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Moldavian company identification numbers (IDNOs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_md_idno(
     --------
     Clean a column of IDNO data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "idno": [
             '1008600038413',
             '1008600038412',]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing French tax identification numbers (NIFs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_fr_nif(
     --------
     Clean a column of NIF data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "nif": [
             "0701987765432",
             "070198776543"]

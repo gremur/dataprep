@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Spanish fiscal numbers (CIFs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_es_cif(
     --------
     Clean a column of CIF data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cif": [
             'A13 585 625',
             'M-1234567-L',]

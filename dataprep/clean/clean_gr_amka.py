@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Greek social security numbers (AMKAs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_gr_amka(
     --------
     Clean a column of AMKA data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "amka": [
             '01013099997',
             '01013099999']

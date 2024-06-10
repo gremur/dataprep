@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Costa Rica physical person ID number (CPFs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_cr_cpf(
     --------
     Clean a column of CPF data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cpf": [
             "1-613-584",
             "30-1234-1234"]

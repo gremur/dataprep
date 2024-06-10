@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 NIPT (Numri i Identifikimit për Personin e Tatueshëm, Albanian VAT number).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument, E1101, E1133
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_al_nipt(
     --------
     Clean a column of Albanian NIPT data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "al_nipt": [
             "AL J 91402501 L",
             "K22218003V",

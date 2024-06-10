@@ -2,6 +2,7 @@
     This module implements the plot_missing(df, x, y) function's
     visualization part.
 """
+
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
@@ -383,7 +384,7 @@ def render_heatmaps(data: Optional[pd.DataFrame], plot_width: int, plot_height: 
         df = data.copy()
         df.columns = list(map(cut_long_name, df.columns))
         df.index = list(map(cut_long_name, df.index))
-        df = df.where(np.triu(np.ones(df.shape)).astype(np.bool)).T  # pylint: disable=no-member
+        df = df.where(np.triu(np.ones(df.shape)).astype(bool)).T  # pylint: disable=no-member
 
         if df.size != 0:
             x_range = FactorRange(*df.columns)

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Dominican Republic national identifier (Cedulas).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_do_cedula(
     --------
     Clean a column of Cedula data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cedula": [
             "22400022111",
             "0011391820A"]

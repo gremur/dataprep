@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 International Standard Identifier for Libraries (ISIL) numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_isil(
     --------
     Clean a column of ISIL data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "isil": [
             "it-RM0267",
             "OCLC-DLC"]

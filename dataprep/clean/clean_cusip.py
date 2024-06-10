@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 CUSIP numbers (financial security identification number).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument
 from typing import Any, Union
 from operator import itemgetter
@@ -66,7 +67,7 @@ def clean_cusip(
     --------
     Clean a column of CUSIP numbers data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cusip": [
             "DUS0421C5"]
             })

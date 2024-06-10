@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Bulgarian national identification numbers (EGNs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -60,7 +61,7 @@ def clean_bg_egn(
     --------
     Clean a column of EGN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "egn": [
             '752316 926 3',
             '7552A10004']

@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 French company identification numbers (SIRENs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_fr_siren(
     --------
     Clean a column of SIREN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "siren": [
             '552 008 443',
             '404833047']

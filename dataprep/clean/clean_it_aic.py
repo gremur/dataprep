@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 Italian code for identification of drugs (AICs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -63,7 +64,7 @@ def clean_it_aic(
     --------
     Clean a column of AIC data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "aic": [
             '000307052',
             '999999',]

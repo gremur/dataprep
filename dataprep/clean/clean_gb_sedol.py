@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 Stock Exchange Daily Official List numbers (SEDOLs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_gb_sedol(
     --------
     Clean a column of SEDOL data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "sedol": [
             'B15KXQ8',
             'B15KXQ7']

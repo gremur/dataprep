@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 International value added tax identification numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument, E1101, E1133
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_vatin(
     --------
     Clean a column of VATIN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "vatin": [
             "FR 40 303 265 045",
             "DE136,695 976"]

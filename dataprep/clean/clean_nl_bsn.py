@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing Burgerservicenummer,
 the Dutch citizen identification numbers (BSNs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_nl_bsn(
     --------
     Clean a column of BSN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "bsn": [
             "111222333",
             "1112223334",]

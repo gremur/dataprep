@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Czech VAT number (DICs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_cz_dic(
     --------
     Clean a column of DIC data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "dic": [
             'CZ 25123891',
             '25123890',]

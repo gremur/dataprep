@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Ecuadorian company tax number (RUCs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_ec_ruc(
     --------
     Clean a column of RUC data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "ruc": [
             '1792060346-001',
             '1763154690001']

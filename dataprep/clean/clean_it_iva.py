@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Italian IVA numbers (IVAs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_it_iva(
     --------
     Clean a column of IVA data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "iva": [
             'IT 00743110157',
             '00743110158',]

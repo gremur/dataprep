@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Israeli company numbers (HPs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_il_hp(
     --------
     Clean a column of HP data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "hp": [
             ' 5161 79157 ',
             '516179150',]

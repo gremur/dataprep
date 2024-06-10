@@ -1,6 +1,7 @@
 """
     module for testing create_report(df) function.
 """
+
 import logging
 import numpy as np
 import pandas as pd
@@ -105,3 +106,14 @@ def test_dataset() -> None:
 
 def test_random_df(random_df: pd.DataFrame) -> None:
     create_report(random_df)
+
+
+def test_empty() -> None:
+    df = pd.DataFrame()
+    create_report(df)
+
+
+def test_cat_df() -> None:
+    df = load_dataset("titanic")
+    ddf = df[["Name", "Sex"]]
+    create_report(ddf)

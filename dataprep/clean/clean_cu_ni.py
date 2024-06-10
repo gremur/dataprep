@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Cuban identity card numbers (NIs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_cu_ni(
     --------
     Clean a column of NI data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "ni": [
             '91021027775',
             '9102102777A',]

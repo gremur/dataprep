@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Guatemala tax numbers (NITs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_gt_nit(
     --------
     Clean a column of NIT data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "nit": [
             "39525503",
             "8977112-0",]

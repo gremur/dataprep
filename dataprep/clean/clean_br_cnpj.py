@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing CNPJ numbers, Brazilian company identifier.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_br_cnpj(
     --------
     Clean a column of CNPJ data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cnpj": [
             '16727230000197',
             '16.727.230.0001-98', # InvalidChecksum

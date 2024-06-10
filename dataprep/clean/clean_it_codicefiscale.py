@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Italian fiscal codes (Codice Fiscales).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_it_codicefiscale(
     --------
     Clean a column of Codice Fiscale data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "codicefiscale": [
             'RCCMNL83S18D969H',
             'RCCMNL83S18D969']

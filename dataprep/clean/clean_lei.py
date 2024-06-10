@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 Legal Entity Identifier (LEI) Numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument, E1101, E1133
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_lei(
     --------
     Clean a column of LEI Numbers data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "lei": [
             "213800KUD8LAJWSQ9D15"]
             })

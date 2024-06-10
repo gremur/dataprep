@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Indonesian VAT Numbers (NPWPs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_id_npwp(
     --------
     Clean a column of NPWP data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "npwp": [
             "013000666091000",
             "123456789",]

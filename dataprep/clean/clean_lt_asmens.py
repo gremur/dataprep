@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Lithuanian personal numbers (Asmens kodas).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -60,7 +61,7 @@ def clean_lt_asmens(
     --------
     Clean a column of Asmens kodas data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "asmens": [
             '33309240064',
             '33309240164',]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing European Energy Identification Codes.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_eu_eic(
     --------
     Clean a column of EIC data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "eic": [
             '22XWATTPLUS----G',
             '22XWATTPLUS----X']

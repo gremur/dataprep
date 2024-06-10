@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 French company establishment identification numbers (SIRETs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_fr_siret(
     --------
     Clean a column of SIRET data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "siret": [
             "73282932000074",
             "73282932000079"]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Australian Business Numbers (ABNs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -8,7 +9,7 @@ from operator import itemgetter
 import dask.dataframe as dd
 import numpy as np
 import pandas as pd
-
+import dask
 from stdnum.au import abn
 from ..progress_bar import ProgressBar
 from .utils import NULL_VALUES, to_dask
@@ -58,7 +59,7 @@ def clean_au_abn(
     --------
     Clean a column of ABN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "abn": [
             "51824753556",
             "99999999999",]
@@ -100,7 +101,7 @@ def clean_au_abn(
         df = df.rename(columns={column: f"{column}_clean"})
 
     with ProgressBar(minimum=1, disable=not progress):
-        df = df.compute()
+        df = dask.compute()
 
     return df
 

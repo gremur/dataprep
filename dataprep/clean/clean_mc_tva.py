@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Monacan TVA numbers (TVAs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_mc_tva(
     --------
     Clean a column of TVA data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "tva": [
             '53 0000 04605',
             'FR 61 954 506 077',]

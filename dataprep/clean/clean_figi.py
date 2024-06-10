@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 FIGI (Financial Instrument Global Identifier) Numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_figi(
     --------
     Clean a column of FIGI Numbers data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "figi": [
             "87-86-5"]
             })

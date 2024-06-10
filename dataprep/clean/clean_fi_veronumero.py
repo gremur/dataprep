@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Finnish individual tax numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_fi_veronumero(
     --------
     Clean a column of Veronumero data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "veronumero": [
             '123456789123',
             '12345678912A']

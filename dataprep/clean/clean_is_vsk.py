@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Icelandic VSK numbers (VSKs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_is_vsk(
     --------
     Clean a column of VSK data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "vsk": [
             'IS 00621',
             'IS 0062199',]

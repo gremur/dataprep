@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Spanish meter point numbers (CUPSs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_es_cups(
     --------
     Clean a column of CUPS data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cups": [
             "ES1234123456789012JY1F",
             "ES 1234-123456789012-XY 1F",]

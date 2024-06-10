@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 CUIT (Código Único de Identificación Tributaria, Argentinian tax number).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument, E1101, E1133
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_ar_cuit(
     --------
     Clean a column of Argentinian CUIT data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "ar_cuit": [
             "20-05536168-2",
             "20267565393",

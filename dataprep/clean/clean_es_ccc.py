@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Spanish Bank Account Codes (CCCs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_es_ccc(
     --------
     Clean a column of CCC data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "ccc": [
             "12341234161234567890",
             "134-1234-16 1234567890"]

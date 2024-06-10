@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Mexican personal identifiers (CURPs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -61,7 +62,7 @@ def clean_mx_curp(
     --------
     Clean a column of CURP data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "curp": [
             'BOXW310820HNERXN09',
             'BOXW310820HNERXN08']

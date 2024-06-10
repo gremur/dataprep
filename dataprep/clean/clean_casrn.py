@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing CAS Registry Numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument
 from typing import Any, Union
 from operator import itemgetter
@@ -64,7 +65,7 @@ def clean_casrn(
     --------
     Clean a column of CAS Registry Numbers data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "casrn": [
             "87-86-5"]
             })

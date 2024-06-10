@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Croatian identification numbers (OIBs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_hr_oib(
     --------
     Clean a column of OIB data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "oib": [
             'HR 33392005961',
             '33392005962',]

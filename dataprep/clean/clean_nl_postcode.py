@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Dutch postal codes.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_nl_postcode(
     --------
     Clean a column of postcode data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "postcode": [
             'NL-2611ET',
             '26112 ET',]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Swiss EinzahlungsSchein mit Referenznummer (ESRs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_ch_esr(
     --------
     Clean a column of ESR data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "esr": [
             "18 78583",
             "210000000003139471430009016"]

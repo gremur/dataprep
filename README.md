@@ -6,9 +6,9 @@
   <a href="LICENSE"><img src="https://img.shields.io/pypi/l/dataprep?style=flat-square"/></a>
   <a href="https://sfu-db.github.io/dataprep/"><img src="https://img.shields.io/badge/dynamic/json?color=blue&label=docs&prefix=v&query=%24.info.version&url=https%3A%2F%2Fpypi.org%2Fpypi%2Fdataprep%2Fjson&style=flat-square"/></a>
   <a href="https://pypi.org/project/dataprep/"><img src="https://img.shields.io/pypi/pyversions/dataprep?style=flat-square"/></a>
-  <a href="https://www.codacy.com/gh/sfu-db/dataprep?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sfu-db/dataprep&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/ed658f08dcce4f088c850253475540ba"/></a>
+  <!-- <a href="https://www.codacy.com/gh/sfu-db/dataprep?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sfu-db/dataprep&amp;utm_campaign=Badge_Coverage"><img src="https://app.codacy.com/project/badge/Coverage/ed658f08dcce4f088c850253475540ba"/></a> -->
 <!--   <a href="https://codecov.io/gh/sfu-db/dataprep"><img src="https://img.shields.io/codecov/c/github/sfu-db/dataprep?style=flat-square"/></a> -->
-  <a href="https://www.codacy.com/gh/sfu-db/dataprep?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sfu-db/dataprep&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/ed658f08dcce4f088c850253475540ba"/></a>
+  <!-- <a href="https://www.codacy.com/gh/sfu-db/dataprep?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sfu-db/dataprep&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/ed658f08dcce4f088c850253475540ba"/></a> -->
 </p>
 
 <p align="center">
@@ -17,7 +17,7 @@
   <a href="https://github.com/sfu-db/dataprep/discussions">Forum</a>
 </p>
 
-DataPrep lets you prepare your data using a single library with a few lines of code.
+<p align="center"><b>Low code data preparation</b></p>
 
 Currently, you can use DataPrep to:
 
@@ -101,9 +101,13 @@ Check [plot](https://sfu-db.github.io/dataprep/user_guide/eda/plot.html), [plot_
 
 DataPrep.Clean contains about **140+** functions designed for cleaning and validating data in a DataFrame. It provides
 
+- **A Convenient GUI**: incorporated into Jupyter Notebook, users can clean their own DataFrame without any coding (see the video below).
 - **A Unified API**: each function follows the syntax `clean_{type}(df, 'column name')` (see an example below).
 - **Speed**: the computations are parallelized using Dask. It can clean **50K rows per second** on a dual-core laptop (that means cleaning 1 million rows in only 20 seconds).
 - **Transparency**: a report is generated that summarizes the alterations to the data that occured during cleaning.
+
+The following video shows how to use GUI of Dataprep.Clean
+<a href="https://youtu.be/WtJaVBIVoxQ"><img src="assets/clean_video_cover.png"/></a>
 
 The following example shows how to clean and standardize a column of country names.
 
@@ -180,6 +184,27 @@ read_sql("postgresql://username:password@server:port/database", "SELECT * FROM l
 
 Check out [here](https://github.com/sfu-db/connector-x#supported-sources--destinations) for supported databases and dataframes and more examples usages.
 
+
+## Lineage
+A Column Level Lineage Graph for SQL. This tool is intended to help you by creating an interactive graph on a webpage to explore the column level lineage among them.
+
+### The lineage module offers:
+A general introduction of the project can be found in this [blog post](https://medium.com/@shz1/lineagex-the-python-library-for-your-lineage-needs-5e51b77a0032).
+- **Automatic dependency creation**: When there are dependency among the SQL files, and those tables are not yet in the database, the lineage module will automatically tries to find the dependency table and creates it.
+- **Clean and simple but very interactive user interface**: The user interface is very simple to use with minimal clutters on the page while showing all of the necessary information.
+- **Variety of SQL statements**: The lineage module supports a variety of SQL statements, aside from the typical `SELECT` statement, it also supports `CREATE TABLE/VIEW [IF NOT EXISTS]` statement as well as the `INSERT` and `DELETE` statement.
+- **[dbt](https://docs.getdbt.com/) support**: The lineage module is also implemented in the [dbt-LineageX](https://github.com/sfu-db/dbt-lineagex), it is added into a dbt project and by using the dbt library [fal](https://github.com/fal-ai/fal), it is able to reuse the Python core and create the similar output from the dbt project.
+
+### Uses and Demo
+The interactive graph looks like this: 
+<img src="https://raw.githubusercontent.com/sfu-db/lineagex/main/docs/example.gif"/>
+Here is a [live demo](https://zshandy.github.io/lineagex-demo/) with the [mimic-iv concepts_postgres](https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iv/concepts_postgres) files([navigation instructions](https://sfu-db.github.io/lineagex/output.html#how-to-navigate-the-webpage)) and that is created with one line of code:
+```python
+from dataprep.lineage import lineagex
+lineagex(sql=path/to/sql, target_schema="schema1", conn_string="postgresql://username:password@server:port/database", search_path_schema="schema1, public")
+```
+Check out more detailed usage and examples [here](https://sfu-db.github.io/lineagex/intro.html). 
+
 ## Documentation
 
 The following documentation can give you an impression of what DataPrep can do:
@@ -187,7 +212,8 @@ The following documentation can give you an impression of what DataPrep can do:
 - [Connector](https://docs.dataprep.ai/user_guide/connector/introduction.html)
 - [EDA](https://docs.dataprep.ai/user_guide/eda/introduction.html)
 - [Clean](https://docs.dataprep.ai/user_guide/clean/introduction.html)
-
+- [Lineage](https://sfu-db.github.io/lineagex/intro.html)
+- 
 ## Contribute
 
 There are many ways to contribute to DataPrep.

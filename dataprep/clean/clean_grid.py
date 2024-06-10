@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 Global Release Identifier (GRid) numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_grid(
     --------
     Clean a column of ISBN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "grid": [
             "A12425GABC1234002M",
             "A1-2425G-ABC1234002-M"]

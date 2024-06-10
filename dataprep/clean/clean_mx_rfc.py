@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Mexican tax numbers (RFCs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_mx_rfc(
     --------
     Clean a column of RFC data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "rfc": [
             "GODE561231GR8",
             "BUEI591231GH9",]

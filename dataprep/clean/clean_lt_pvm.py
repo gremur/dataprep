@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Lithuanian PVM numbers (PVMs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_lt_pvm(
     --------
     Clean a column of PVM data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "pvm": [
             '119511515',
             '100001919018',]

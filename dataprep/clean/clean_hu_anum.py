@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Hungarian ANUM numbers (ANUMs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_hu_anum(
     --------
     Clean a column of ANUM data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "anum": [
             'HU-12892312',
             'HU-12892313',]

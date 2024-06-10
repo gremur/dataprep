@@ -20,7 +20,7 @@ def df_ips() -> pd.DataFrame:
             "messy_ip": [
                 "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                 "12.3.4.5",
-                "233.5.6.000",
+                "233.5.6.0",
                 None,
                 {},
                 2982384756,
@@ -44,6 +44,7 @@ def test_clean_input_ipv4(df_ips: pd.DataFrame) -> None:
         "177.195.148.116",
         np.nan,
     ]
+
     assert df_check.equals(df_clean)
 
 
@@ -141,7 +142,7 @@ def test_clean_output_packed(df_ips: pd.DataFrame) -> None:
 def test_validate_value() -> None:
     assert validate_ip("2001:0db8:85a3:0000:0000:8a2e:0370:7334") == True
     assert validate_ip("") == False
-    assert validate_ip("233.5.6.000") == True
+    assert validate_ip("233.5.6.0") == True
     assert validate_ip(np.nan) == False
     assert validate_ip("873.234.1.0") == False
 

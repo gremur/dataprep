@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 International Mobile Equipment Identity (IMEI) numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_imei(
     --------
     Clean a column of IMEI data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "imei": [
             "35686800-004141-20",
             "354178036859789"]

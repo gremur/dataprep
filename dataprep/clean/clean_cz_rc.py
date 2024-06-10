@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Czech birth numbers (RCs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_cz_rc(
     --------
     Clean a column of RC data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "rc": [
             "7103192745",
             "7103192746"]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Polish VAT numbers (NIPs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_pl_nip(
     --------
     Clean a column of NIP data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "nip": [
             "PL 8567346215",
             "PL 8567346216",]

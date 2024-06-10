@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Finnish personal identity codes (HETUs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_fi_hetu(
     --------
     Clean a column of HETU data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "hetu": [
             '131052a308t',
             '131052-308U']

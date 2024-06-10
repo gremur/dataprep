@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 International Securities Identification Number (ISIN) numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument
 from typing import Any, Union
 from operator import itemgetter
@@ -65,7 +66,7 @@ def clean_isin(
     --------
     Clean a column of ISIN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "isin": [
             "US0378331005",
             "GB00BYXJL758"]

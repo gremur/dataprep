@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing country names.
 """
+
 from functools import lru_cache
 from operator import itemgetter
 from os import path
@@ -256,7 +257,7 @@ def _format_country(
 
     if status == "null":
         return np.nan, 0
-    if status == "unknown":
+    if status in "none" or status in "unknown":
         if errors == "raise":
             raise ValueError(f"unable to parse value {val}")
         return val if errors == "ignore" else np.nan, 1
@@ -271,7 +272,7 @@ def _format_country(
     return result, 2 if val != result else 3
 
 
-@lru_cache(maxsize=2 ** 20)
+@lru_cache(maxsize=2**20)
 def _check_country(country: str, input_formats: Tuple[str, ...], strict: bool, clean: bool) -> Any:
     """
     Finds the index of the given country in the DATA dataframe.
@@ -289,7 +290,7 @@ def _check_country(country: str, input_formats: Tuple[str, ...], strict: bool, c
         If True, a tuple (index, status) is returned.
         If False, the function returns True/False to be used by the validate country function.
     """
-    if country in NULL_VALUES:
+    if country in "none" or country in NULL_VALUES:
         return (None, "null") if clean else False
 
     country_format = _get_format_from_name(country)
@@ -322,7 +323,7 @@ def _check_country(country: str, input_formats: Tuple[str, ...], strict: bool, c
     return (None, "unknown") if clean else False
 
 
-@lru_cache(maxsize=2 ** 20)
+@lru_cache(maxsize=2**20)
 def _check_fuzzy_dist(country: str, fuzzy_dist: int) -> Any:
     """
     A match is found if a country has an edit distance <= fuzzy_dist
@@ -371,9 +372,7 @@ def _get_format_if_allowed(input_format: str, allowed_formats: Tuple[str, ...]) 
         return (
             "name"
             if "name" in allowed_formats
-            else "official"
-            if "official" in allowed_formats
-            else None
+            else "official" if "official" in allowed_formats else None
         )
 
     return input_format if input_format in allowed_formats else None

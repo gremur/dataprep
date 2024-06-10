@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Swiss social security numbers (SSNs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_ch_ssn(
     --------
     Clean a column of SSN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "ssn": [
             '7569217076985',
             '756.9217.0769.84',]

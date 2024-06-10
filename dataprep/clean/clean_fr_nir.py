@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 French personal identification numbers (NIRs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_fr_nir(
     --------
     Clean a column of NIR data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "nir": [
             "295109912611193",
             "253072C07300443"]

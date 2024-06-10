@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing CPF numbers, Brazilian national identifier.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_br_cpf(
     --------
     Clean a column of CPF data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cpf": [
             '23100299900',
             '231.002.999-00', # InvalidChecksum

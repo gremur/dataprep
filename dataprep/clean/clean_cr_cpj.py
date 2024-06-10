@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Costa Rica tax number (CPJs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_cr_cpj(
     --------
     Clean a column of CPJ data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cpj": [
             "4 000 042138",
             "3-534-123559"]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Norwegian VAT numbers (MVAs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_no_mva(
     --------
     Clean a column of MVA data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "mva": [
             "995525828MVA",
             "NO 995 525 829 MVA",]

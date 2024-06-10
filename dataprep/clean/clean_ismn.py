@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing ISMN numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -64,7 +65,7 @@ def clean_ismn(
     --------
     Clean a column of ISBN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "ismn": [
             "978-9024538270",
             "978-9024538271"]

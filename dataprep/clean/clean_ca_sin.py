@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Canadian Social Insurance Numbers(SINs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_ca_sin(
     --------
     Clean a column of SIN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "sin": [
             '123456782',
             '12345678Z',]

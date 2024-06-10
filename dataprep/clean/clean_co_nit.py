@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Colombian identity codes (NITs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_co_nit(
     --------
     Clean a column of NIT data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "nit": [
             "2131234321",
             "2131234325"]

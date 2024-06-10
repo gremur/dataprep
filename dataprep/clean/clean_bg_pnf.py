@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Bulgarian personal number of a foreigner.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_bg_pnf(
     --------
     Clean a column of PNF data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "pnf": [
             '7111 042 925',
             '7111042922'] # invalid check digit

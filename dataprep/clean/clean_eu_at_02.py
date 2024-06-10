@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing AT-02 (SEPA Creditor identifier).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_eu_at_02(
     --------
     Clean a column of AT-02 data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "at_02": [
             'ES++()+23ZZZ4//7690558N',
             'ES2900047690558N']

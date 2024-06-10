@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Luxembourgian TVA numbers (TVAs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_lu_tva(
     --------
     Clean a column of TVA data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "tva": [
             'LU 150 274 42',
             '150 274 43',]

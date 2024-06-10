@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 Liechtenstein tax code for individuals and entities (PEIDs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -60,7 +61,7 @@ def clean_li_peid(
     --------
     Clean a column of PEID data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "peid": [
             '00001234567',
             '00001234568913454545',]

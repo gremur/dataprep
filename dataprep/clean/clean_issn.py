@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 International Standard Serial Numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches, unused-argument
 from typing import Any, Union
 from operator import itemgetter
@@ -66,7 +67,7 @@ def clean_issn(
     --------
     Clean a column of FIGI Numbers data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "issn": [
             "00249319",
             "00321478"]

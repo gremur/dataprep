@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Norwegian birth numbers.
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -60,7 +61,7 @@ def clean_no_fodselsnummer(
     --------
     Clean a column of fodselsnummer data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "fodselsnummer": [
             '15108695088',
             '15108695077']

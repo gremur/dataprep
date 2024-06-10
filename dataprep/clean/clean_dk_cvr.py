@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Danish CVR number (CVRs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_dk_cvr(
     --------
     Clean a column of CVR data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cvr": [
             'DK 13585628',
             'DK 13585627']

@@ -2,6 +2,7 @@
 Clean and validate a DataFrame column containing
 South Korea Business Registration Numbers (BRNs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_kr_brn(
     --------
     Clean a column of BRN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "brn": [
             "1348672683",
             "123456789",]

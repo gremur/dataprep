@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Dominican Republic invoice numbers (NCFs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_do_ncf(
     --------
     Clean a column of NCF data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "ncf": [
             'E310000000005',
             'Z0100000005',]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Chile RUT/RUN numbers (RUTs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_cl_rut(
     --------
     Clean a column of RUT data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "rut": [
             "125319092",
             "76086A28-5"]

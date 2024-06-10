@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Japanese Corporate Numbers (CNs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -58,7 +59,7 @@ def clean_jp_cn(
     --------
     Clean a column of CN data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "cn": [
             "5835678256246",
             "2-8356-7825-6246",]

@@ -1,6 +1,7 @@
 """
 Clean and validate a DataFrame column containing Finnish ALV numbers (ALVs).
 """
+
 # pylint: disable=too-many-lines, too-many-arguments, too-many-branches
 from typing import Any, Union
 from operator import itemgetter
@@ -59,7 +60,7 @@ def clean_fi_alv(
     --------
     Clean a column of ALV data.
 
-    >>> df = pd.DataFrame({{
+    >>> df = pd.DataFrame({
             "alv": [
             'FI 20774740',
             'FI 20774741']
